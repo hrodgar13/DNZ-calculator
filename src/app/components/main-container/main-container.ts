@@ -16,14 +16,13 @@ export class MainContainer {
   hitDiceCost = 0;
   rationsCost = 0;
 
-  // Cost maps - ALL body types = 32 points, ALL progressions are strictly linear
   strCostMap = { '-2': 0, '-1': 2, '0': 4, '1': 8, '2': 9, '3': 12, '4': 15 };
   dexCostMap = { '-2': 0, '-1': 2, '0': 5, '1': 8, '2': 9, '3': 16, '4': 20 };
   conCostMap = { '-2': 0, '-1': 2, '0': 4, '1': 7, '2': 9, '3': 12, '4': 15 };
   speedCostMap = { '15': 0, '20': 2, '25': 4, '30': 5 };
   bloodCostMap = { '8': 0, '10': 2, '12': 4 };
   hitDiceCostMap = { '8': 0, '10': 2, '12': 4 };
-  rationsCostMap = { '1': 6, '2': 3, '3': 0 };  // Inverted: fewer rations = higher cost
+  rationsCostMap = { '1': 6, '2': 3, '3': 0 };
 
   get usedPoints(): number {
     return this.strCost + this.dexCost + this.conCost +
@@ -31,7 +30,6 @@ export class MainContainer {
   }
 
   get availablePoints(): number {
-    // All body types are balanced to 32 points
     return 32;
   }
 
