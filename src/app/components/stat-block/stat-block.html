@@ -1,0 +1,6 @@
+<div class="stat-row">
+  <span>{{statName}}: </span>
+  <button [disabled]="value <= minimumValue" (click)="decreaseValue()">-</button>
+  <span>{{ applyConcatenationSymbol ? customPrefix ? customPrefix : value < 0 ? '-' : '+' : ''}}{{value | abs}}{{customPostfix}}</span>
+  <button [disabled]="value >= maximumValue" (click)="increaseValue()">+</button>
+</div>

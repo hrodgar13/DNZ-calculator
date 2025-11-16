@@ -1,0 +1,66 @@
+<div class="main-container">
+  <h2>Create your own body type</h2>
+  <app-stat-block
+    [statName]="'Str'"
+    [costMap]="strCostMap"
+    (costChange)="updateStrCost($event)">
+  </app-stat-block>
+
+  <app-stat-block
+    [statName]="'Dex'"
+    [costMap]="dexCostMap"
+    (costChange)="updateDexCost($event)">
+  </app-stat-block>
+
+  <app-stat-block
+    [statName]="'Con'"
+    [costMap]="conCostMap"
+    (costChange)="updateConCost($event)">
+  </app-stat-block>
+
+  <app-stat-block
+    [step]="5"
+    [customPostfix]="'ft'"
+    [applyConcatenationSymbol]="false"
+    [value]="25"
+    [minimumValue]="15"
+    [maximumValue]="30"
+    [statName]="'Speed'"
+    [costMap]="speedCostMap"
+    (costChange)="updateSpeedCost($event)">
+  </app-stat-block>
+
+  <app-stat-block
+    [step]="2"
+    [customPrefix]="'1d'"
+    [value]="8"
+    [minimumValue]="8"
+    [maximumValue]="12"
+    [statName]="'Blood points'"
+    [costMap]="bloodCostMap"
+    (costChange)="updateBloodCost($event)">
+  </app-stat-block>
+
+  <app-stat-block
+    [step]="2"
+    [customPrefix]="'1d'"
+    [value]="10"
+    [minimumValue]="8"
+    [maximumValue]="12"
+    [statName]="'Hit dice'"
+    [costMap]="hitDiceCostMap"
+    (costChange)="updateHitDiceCost($event)">
+  </app-stat-block>
+
+  <app-stat-block
+    [applyConcatenationSymbol]="false"
+    [value]="2"
+    [minimumValue]="1"
+    [maximumValue]="3"
+    [statName]="'Rations'"
+    [costMap]="rationsCostMap"
+    (costChange)="updateRationsCost($event)">
+  </app-stat-block>
+
+  <div>Available points {{usedPoints}}/{{availablePoints}}</div>
+</div>

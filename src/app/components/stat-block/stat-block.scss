@@ -1,0 +1,13 @@
+.stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+
+  button {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 0;
+  }
+}
